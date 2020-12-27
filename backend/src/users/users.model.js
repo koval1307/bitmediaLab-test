@@ -4,11 +4,19 @@ const path = require("path");
 
 
 const usersPath = path.join(__dirname, "../../db/users.json");
+const statisticPath = path.join(__dirname,"../db/users_statistic.json")
 
 
 async function usersList() {
-    const users = await fsp.readFile(usersPath, "utf8")
-    return users
+  const users = await fsp.readFile(usersPath, "utf8", (err, data) => {
+    if (err) console.error(err);
+      const userList = JSON.parse(data);
+  })
+    return userList
+};
+async function usersStatistic() {
+    const usersStatistic = await fsp.readFile(statisticPath, "utf8")
+    return usersStatistic
 };
 
 async function findUserById(userId) {
@@ -25,5 +33,6 @@ async function findUserById(userId) {
 
 module.exports = {
     usersList,
-    findUserById
+  findUserById,
+    usersStatistic
 }

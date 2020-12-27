@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "author": "dima <dmytrokovalskyi@yahoo.com>",
@@ -14,8 +14,13 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "knex": "^0.21.14",
+    "knex-paginate": "^1.2.3",
+    "md5": "^2.3.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6",
-    "sqlite3": "^5.0.0"
+    "objection": "^2.2.3",
+    "sqlite3": "^5.0.0",
+    "underscore": "^1.12.0"
   }
 }

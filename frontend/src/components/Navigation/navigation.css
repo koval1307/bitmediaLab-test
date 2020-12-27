@@ -1,0 +1,28 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 24px;
+  padding-top: 16px;
+  width: 100%;
+}
+
+.item {
+  font-size: 16px;
+  color: #CCCCCC;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.item-active {
+  font-size: 16px;
+  color: #3A80BA;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: normal;
+}
+/*# sourceMappingURL=navigation.css.map */

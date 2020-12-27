@@ -1,0 +1,43 @@
+.footer__home {
+    background: url("footer-svg.svg")no-repeat;
+
+    background-size: cover;
+    height: 183px;
+    padding: 0 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.rights {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    h3 {
+        margin: 24px 0 30px 30px;
+        color: #FFFFFF;
+    }
+
+    p {
+        font-size: 16px;
+        color: #FFFFFF;
+        margin: 32px 0 auto 0;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .rights {
+        flex-direction: column;
+
+        h3,
+        p {
+            margin: 10px auto 10px auto;
+        }
+    }
+
+    footer {
+        height: auto;
+    }
+}

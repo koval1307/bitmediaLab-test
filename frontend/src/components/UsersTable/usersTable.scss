@@ -1,0 +1,37 @@
+.top__row{
+background-color: #3A80BA;
+width: 100%;
+height: 48px;
+}
+
+.table{
+   
+     border-collapse: separate;
+     border-spacing: 1 0px;
+     table-layout: fixed;
+
+}
+.top_row__item{
+padding-top: 14px;
+padding-bottom: 14px;
+padding-left: 24px;
+// align-items: center;
+color: #ffff;
+   
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+}
+.top_row__item:first-child{
+ border-radius: 20px 0 0 0;
+}
+.top_row__item:last-child {
+    border-radius: 0 20px 0 0;
+}
+.table__row:nth-child(odd){
+    background-color: #FBFBFB;
+}
+.table__row:nth-child(even) {
+    background-color: #F1F1F1;
+}

@@ -1,0 +1,37 @@
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 128px;
+}
+
+.card {
+  max-width: 380px;
+  height: auto;
+  margin: 16px 10px 0 10px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 32px;
+}
+
+.card img {
+  margin: 48px auto 40px auto;
+}
+
+.card h4 {
+  margin: 0 auto 14px auto;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 0 32px 48px 32px;
+}
+/*# sourceMappingURL=main.css.map */
