@@ -2,24 +2,38 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import operations from "../../redux/users/users.operations";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis,Tooltip,Legend } from "recharts";
-import { useLocation, useParams, useHistory } from "react-router-dom";
-
-
+import { useLocation, useParams,  NavLink } from "react-router-dom";
+import "./userStats.scss"
+import { BoxLoader } from "../LoaderBox/LoaderBox";
 
 export default function UsersStats({}) {
 
   const location = useLocation()
+  const params = useParams()
   const userName = location.state
+  const isLoading = useSelector((state) => state.loading);
 
       const dispatch = useDispatch();
       useEffect(() => {
-        dispatch(operations.getUser(3));
+        dispatch(operations.getUser(params.userId));
       }, []);
-    const user = useSelector((state) => state.users);
+    const user = useSelector((state) => state.currentUser);
 
     return (
       <div className="stats__container">
-        <p className="user">{userName}</p>
+        {isLoading && <BoxLoader />}
+        <div className="navigation__container">
+          <NavLink className="navigation__link" to="/">
+            <span className="navigation__item">Main Page</span>
+          </NavLink>
+          <NavLink className="navigation__link" to="/users">
+            <span className="navigation__item"> User Statistics </span>
+          </NavLink>
+          <NavLink className="navigation__link" to="/users:">
+            <span className="navigation__item-active"> {userName} </span>
+          </NavLink>
+        </div>
+        <p className="stats__user">{userName}</p>
         <LineChart
           width={1100}
           height={300}
@@ -43,7 +57,6 @@ export default function UsersStats({}) {
           data={user}
           margin={{
             top: 5,
-
             bottom: 5,
           }}
         >

@@ -48,6 +48,7 @@ exports.getUsers = async (req, res,next) => {
                 const startIndex = (page - 1) * limit;
             const endIndex = page * limit;
             const result = mergedList.slice(startIndex, endIndex);
+            console.log(result)
                   res.json(result);
           });
     })

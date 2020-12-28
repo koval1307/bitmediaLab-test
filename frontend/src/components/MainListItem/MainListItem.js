@@ -3,10 +3,10 @@ import "./mainListItem.scss"
 
 export default function MainListItem(item) {
     return (
-      <div>
-        <img src={item.icon} alt="Card icon" />
-        <h4>{item.title}</h4>
-        <p>{item.text}</p>
+      <div className="card">
+        <img className="card__icon" src={item.icon} alt="card icon" />
+        <h3 className="card__title">{item.title}</h3>
+        <p className="card__description">{item.text}</p>
       </div>
     );
 }

@@ -6,9 +6,9 @@ import { NavLink } from "react-router-dom";
 export default function Header() {
     return (
       <header>
-        <div className="text--header">
+        <div className="headerHome__text">
           <NavLink to="/">
-            <h2 className="brand--name">AppCo</h2>
+            <h2 className="headerHome__logo">AppCo</h2>
           </NavLink>
           <h1>
             <strong>Brainstorming</strong> for desired perfect Usability
@@ -17,11 +17,11 @@ export default function Header() {
             Our design projects are fresh and simple and will benefit your
             business greatly. Learn more about our work!
           </p>
-          <a href="/users">
-            <button className="view--stats--button">Views Stats</button>
-          </a>
+            <NavLink to="users/">
+              <button className="headerHome__button">Views Stats</button>
+            </NavLink>
         </div>
-        <img id="mobile" src={mobile} alt="Iphone X" />
+        <img className="headerHome__mobile" src={mobile} alt="Mobile" />
       </header>
     );
 }

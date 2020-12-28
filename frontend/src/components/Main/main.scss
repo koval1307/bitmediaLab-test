@@ -4,3 +4,28 @@ main {
      sans-serif;
 }
 
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 16px auto 24px auto;
+    text-align: center;
+    padding: 0 12px 0 12px;
+
+}
+.home__tittle{
+    max-width: 420px;
+    font-weight: 500;
+    color: #1A1A1A;
+    font-size: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home__description{
+  margin-left: auto;
+  margin-right: auto;
+      max-width: 710px;
+      color: #7E7E7E;
+      font-size: 20px;
+  
+}

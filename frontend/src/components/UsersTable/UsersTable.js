@@ -3,16 +3,35 @@ import { useDispatch, useSelector } from 'react-redux';
 import operations from '../../redux/users/users.operations'
 import Pagination from "@material-ui/lab/Pagination";
 import "./usersTable.scss"
-import { useHistory } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import { useHistory, NavLink } from "react-router-dom";
+import LoaderBox, { BoxLoader } from '../LoaderBox/LoaderBox'
+// const useStyles = makeStyles({
+//   root: {
 
+//     borderRadius: 3,
+//     border: 0,
+//     color: "white",
+//     height: 48,
+//     padding: "0 30px",
+//     boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+//   },
+//   MuiPaginationItem :{
+    
+//   },
+//   label: {
+//     textTransform: "capitalize",
+//   },
+// });
 export default function UsersList() {
 
   const history = useHistory();
-  console.log(history)
   const handleRowClick = (row,name) => {
     history.push(`/users/${row}` , name);
   }; 
-  const users = useSelector((state) => state.users);
+  const users = useSelector(state => state.usersList)
+  const isLoading = useSelector(state => state.loading)
+
 const [page, setPage] = useState(1);
 
   const dispatch = useDispatch();
@@ -26,7 +45,17 @@ const [page, setPage] = useState(1);
  };
 
     return (
-      <div className="table__container">
+      <div className="table__section">
+        {isLoading && <BoxLoader />}
+        <div className="navigation__container">
+          <NavLink className="navigation__link" to="/">
+            <span className="navigation__item">Main Page </span>
+          </NavLink>
+          <NavLink className="navigation__link" to="/users">
+            <span className="navigation__item-active"> User Statistics </span>
+          </NavLink>
+        </div>
+
         <h1>Users statistic</h1>
         <table className="table">
           <thead className="top__row">
@@ -45,7 +74,12 @@ const [page, setPage] = useState(1);
             {users.map((user) => (
               <tr
                 key={user.id}
-                onClick={() => handleRowClick(user.id , user.first_name +" "+ user.last_name)}
+                onClick={() =>
+                  handleRowClick(
+                    user.id,
+                    user.first_name + " " + user.last_name
+                  )
+                }
                 className="table__item"
               >
                 <th>{user.id}</th>
@@ -60,14 +94,19 @@ const [page, setPage] = useState(1);
             ))}
           </tbody>
         </table>
-        <Pagination
-          count={20}
-          variant="outlined"
-          shape="rounded"
-          color="primary"
-          page={page}
-          onChange={handleChange}
-        />
+        <div className="table__pagination">
+          <Pagination
+            // classes={{
+            //   root:classes.root
+            // }}
+            count={20}
+            variant="outlined"
+            shape="rounded"
+            color="primary"
+            page={page}
+            onChange={handleChange}
+          />
+        </div>
       </div>
     );
 }

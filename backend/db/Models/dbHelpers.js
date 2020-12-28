@@ -7,9 +7,9 @@ class UsersServices extends Model {
     return UsersServices.query();
   }
 
-  static getAllUsers() {
-    return UsersServices.query();
-  }
+  // static getAllUsers() {
+  //   return UsersServices.query();
+  // }
  
 }
 

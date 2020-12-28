@@ -7,7 +7,7 @@ const Footer = () => {
     return (
       <footer className="footer">
         <div className="footer__container">
-          <NavLink to="/">
+          <NavLink className="footer_link" to="/">
             <p className="footer__logo">AppCo</p>
           </NavLink>
           <p className="footer__rights">All rights reserved by ThemeTags</p>

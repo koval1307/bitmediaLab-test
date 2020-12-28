@@ -1,6 +1,6 @@
 
 header {
-    background: url("./header-svg.svg")no-repeat;
+    background: url("./header.svg")no-repeat;
     background-size: cover;
     height: 655px;
     padding: 0;
@@ -9,7 +9,7 @@ header {
      sans-serif;
 }
 
-.brand--name {
+.headerHome__logo {
     display: flex;
     justify-content: flex-start;
     padding: 24px 10px 48px 0;
@@ -21,7 +21,7 @@ header {
   sans-serif;
 }
 
-.text--header {
+.headerHome__text {
     margin: 0 9vw 0 9vw;
     max-width: 620px;
 
@@ -42,7 +42,7 @@ header {
     }
 }
 
-.view--stats--button {
+.headerHome__button {
     height: 56px;
     width: 154px;
     font-family: Montserrat, serif;
@@ -52,35 +52,17 @@ header {
     border-radius: 8px;
     border: none;
     margin-top: 32px;
+    cursor: pointer;
 }
 
-#mobile {
+.headerHome__mobile {
     margin: 70px auto 30px auto;
 }
 
-.centered--text {
-    margin: 16px auto 24px auto;
-    text-align: center;
-    padding: 0 12px 0 12px;
 
-    h3 {
-        max-width: 420px;
-        font-weight: 500;
-        color: #1A1A1A;
-    }
-
-    h4 {
-        color: #1A1A1A;
-    }
-
-    p {
-        max-width: 710px;
-        color: #7E7E7E;
-    }
-}
 
 @media all and (max-width: 1000px) {
-    .text--header {
+    .headerHome__text {
         margin: 0 0 0 9vw;
     }
 }
@@ -91,16 +73,16 @@ header {
         height: auto;
     }
 
-    #mobile {
+    .headerHome__mobile {
         margin-top: 32px;
     }
 
-    .text--header {
+    .headerHome__text {
         display: inline-grid;
         margin: 0 9vw 0 9vw;
     }
 
-    .view--stats--button {
+    .headerHome__button {
         margin: 32px auto 0 auto;
     }
 }
