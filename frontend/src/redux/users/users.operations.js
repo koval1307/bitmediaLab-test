@@ -5,7 +5,7 @@ const getAllUsers = (page) => async (dispatch) => {
   dispatch(actions.getAllUsersRequest());
   try {
       const response = await axios.get(
-        `http://localhost:5000/users/?page=${page}`
+        `https://protected-headland-04548.herokuapp.com/users/?page=${page}`
       );
 
     dispatch(actions.getAllUsersSuccess(response.data));
@@ -18,7 +18,7 @@ const getUser = (id) => async (dispatch) => {
   dispatch(actions.getUserByIdRequest());
   try {
     const response = await axios.get(
-      `http://localhost:5000/users/${id}`
+      `https://protected-headland-04548.herokuapp.com/users/${id}`
     );
 
     dispatch(actions.getUserByIdSuccess(response.data));
