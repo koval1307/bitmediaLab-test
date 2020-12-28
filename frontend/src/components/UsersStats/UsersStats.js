@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import operations from "../../redux/users/users.operations";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis,Tooltip,Legend } from "recharts";
+import { useLocation, useParams, useHistory } from "react-router-dom";
 
 
 
+export default function UsersStats({}) {
 
-export default function UsersStats() {
+  const location = useLocation()
+  const userName = location.state
+
       const dispatch = useDispatch();
       useEffect(() => {
         dispatch(operations.getUser(3));
@@ -14,15 +18,14 @@ export default function UsersStats() {
     const user = useSelector((state) => state.users);
 
     return (
-      <div>
-        <p className="user">user name</p>
+      <div className="stats__container">
+        <p className="user">{userName}</p>
         <LineChart
           width={1100}
           height={300}
           data={user}
           margin={{
             top: 5,
-
             bottom: 5,
           }}
         >

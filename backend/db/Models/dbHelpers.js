@@ -10,9 +10,7 @@ class UsersServices extends Model {
   static getAllUsers() {
     return UsersServices.query();
   }
-  static getUserById(id) {
-    return UsersServices.query().where({ id });
-  }
+ 
 }
 
 
@@ -23,9 +21,7 @@ class UsersStatisticServices extends Model {
     return UsersStatisticServices.query();
   }
 
-  static getStatisticForUser(user_id) {
-    return UsersStatisticServices.query().where({ user_id });
-  }
+ 
 }
 
 module.exports = { UsersStatisticServices, UsersServices }

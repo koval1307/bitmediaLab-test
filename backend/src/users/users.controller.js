@@ -1,8 +1,6 @@
-const { usersList, findUserById ,usersStatistic} = require("./users.model")
+
 const knex = require("./../../db/database");
 var _ = require("underscore");
-
-
 
 exports.getUsers = async (req, res,next) => {
   knex("users", "users_statistic")
@@ -103,7 +101,7 @@ exports.getUserStatisticById = async (req, res, next) => {
        
                 const queryId = Number(req.params.userId);
            const queryUser = stats.filter((el) => el.user_id === queryId);
-           console.log(queryUser)
+
            res.json(queryUser);
          });
   

@@ -5,10 +5,20 @@ header {
     height: 655px;
     padding: 0;
     display: flex;
+     font-family: 'Montserrat',
+     sans-serif;
 }
 
 .brand--name {
-    padding: 24px 0 48px 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 24px 10px 48px 0;
+    font-size: 40px;
+    line-height: 49px;
+    font-style: normal;
+    font-weight: normal;
+  font-family: 'Montserrat',
+  sans-serif;
 }
 
 .text--header {

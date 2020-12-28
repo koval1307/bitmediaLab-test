@@ -6,7 +6,6 @@ const usersRouter = require("./users/users.router")
 exports.CrudServer = class {
   start() {
     this.initServer();
-    // this.initDatabase();
     this.initMiddlewares();
     this.initRoutes();
     this.initErrorHandling();

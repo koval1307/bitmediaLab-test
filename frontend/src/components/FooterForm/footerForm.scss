@@ -1,5 +1,5 @@
 form {
-    width: 100%;
+    width: 50%;
     height: 64px;
     margin: 26px auto 10px auto;
     border: 1px solid #F1F1F1;
@@ -39,7 +39,7 @@ form {
 }
 
 
-@media all and (maax-width:700px) {
+@media all and (max-width:700px) {
 
     footer {
         height: auto;

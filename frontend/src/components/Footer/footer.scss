@@ -1,3 +1,16 @@
+a {
+    text-decoration: none;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 24px;
+       line-height: 29px;
+       padding-left: 130px;
+       text-align: center;
+       color:#fff;
+       cursor: pointer;
+    
+}
+
 .footer__container{
     display:flex;
     flex-direction: row;
@@ -6,6 +19,8 @@
     color:#fff;
     background-color: #1C3B55;
         align-items: center;
+     flex: auto;
+         margin-top: 40px;
 
 }
 .footer__logo{

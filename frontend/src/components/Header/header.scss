@@ -1,3 +1,22 @@
+header {
+     font-family: 'Montserrat',
+     sans-serif;
+}
+a{
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 13px;
+      color: #ffffff;
+      letter-spacing: 0.006em;
+      font-size: 40px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 49px;
+      padding-left:130px;
+      margin: 0;
+}
 .header__container{
     display: flex;
     justify-content: flex-start;
@@ -6,16 +25,5 @@
     background-color: #3A80BA;
 }
 .logo {
-    padding-top: 10px;
-    padding-bottom: 13px;
-       color: #ffffff;
-       letter-spacing: 0.006em;
-       font-size: 40px;
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 40px;
-      line-height: 49px;
-      padding-left:130px ;
-      margin: 0;
+    
 }

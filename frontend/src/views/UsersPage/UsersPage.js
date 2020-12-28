@@ -5,6 +5,7 @@ import Navigation from '../../components/Navigation/Navigation'
 
 import "./usersPage.scss"
 import { useSelector } from 'react-redux'
+import Footer from '../../components/Footer/Footer'
 export default function UsersPage() {
 
     const state = useSelector(state => state.users)
@@ -15,6 +16,7 @@ export default function UsersPage() {
             <Header />
             <Navigation/>
             <UsersTable />
+            <Footer/>
       </div>
     );
 }

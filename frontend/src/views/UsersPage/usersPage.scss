@@ -1,6 +1,7 @@
 .container {
-   padding-left: 130px;
-   padding-right: 130px;
-   display: flex;
-   flex-wrap: wrap;
+ font-family: 'Montserrat',
+ sans-serif;
+ display: flex;
+ flex-direction: column;
+ max-width: 100%;
 }

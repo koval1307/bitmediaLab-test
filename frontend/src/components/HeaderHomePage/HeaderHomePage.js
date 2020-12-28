@@ -1,14 +1,15 @@
 import React from 'react'
 import header from './header.scss'
 import mobile from './mobile.svg'
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
       <header>
         <div className="text--header">
-          <a href="/home">
+          <NavLink to="/">
             <h2 className="brand--name">AppCo</h2>
-          </a>
+          </NavLink>
           <h1>
             <strong>Brainstorming</strong> for desired perfect Usability
           </h1>
