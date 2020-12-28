@@ -1,7 +1,9 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
+const path =require("path")
 const usersRouter = require("./users/users.router")
+require("dotenv").config({ path: path.join(__dirname, ".env") });
 
 exports.CrudServer = class {
   start() {
@@ -34,7 +36,7 @@ exports.CrudServer = class {
   }
 
   startListening() {
-    const PORT = 5000;
+    const PORT = process.env.PORT;
     this.app.listen(PORT, () => {
       console.log("Server started listenning on PORT", PORT);
     });

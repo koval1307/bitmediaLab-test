@@ -9,6 +9,9 @@
     "dev": "nodemon index.js"
   },
   "author": "dima <dmytrokovalskyi@yahoo.com>",
+  "engines": {
+    "node": "10.x"
+  },
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
